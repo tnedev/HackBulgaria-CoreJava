@@ -9,19 +9,13 @@ public class ListFun {
         
     } 
     public static ArrayList <Integer> sort (ArrayList <Integer> listInput){
-        ArrayList <Integer> listOutput = new ArrayList(listInput.size()); 
-        for (Integer item:listInput) {
-            listOutput.add((Integer)item);      
-        } 
+        ArrayList <Integer> listOutput = new ArrayList(listInput); 
         Collections.sort(listOutput);
         return listOutput;
     }
     
     public static ArrayList <Integer> reverse (ArrayList <Integer> listInput){
-        ArrayList <Integer> listOutput = new ArrayList(listInput.size()); 
-        for (Integer item:listInput) {
-            listOutput.add((Integer)item);      
-        } 
+        ArrayList <Integer> listOutput = new ArrayList(listInput);  
         Collections.reverse(listOutput);
         return listOutput;
     }
@@ -34,6 +28,8 @@ public class ListFun {
         return false; 
     }
     }
+    
+    
 }
 
 
