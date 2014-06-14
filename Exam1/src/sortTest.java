@@ -37,7 +37,7 @@ public class sortTest {
         listTest.add(4);
         listTest.add(5);
         
-        listOutput = ListFun.sort(listInput);
+        listOutput = (ArrayList<Integer>) ListFun.sort(listInput);
         assertEquals(listTest, listOutput);
     }
     @Test
@@ -56,7 +56,7 @@ public class sortTest {
         listTest.add(1024);
         listTest.add(1024);
         
-        listOutput = ListFun.sort(listInput);
+        listOutput = (ArrayList<Integer>) ListFun.sort(listInput);
         assertEquals(listTest, listOutput);
     }
 }

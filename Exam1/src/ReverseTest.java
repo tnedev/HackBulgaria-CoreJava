@@ -37,7 +37,7 @@ public class ReverseTest {
         listTest.add(2);
         listTest.add(5);
         
-        listOutput = ListFun.reverse(listInput);
+        listOutput = (ArrayList<Integer>) ListFun.reverse(listInput);
         assertEquals(listTest, listOutput);
     }
     @Test
@@ -56,7 +56,7 @@ public class ReverseTest {
         listTest.add(0);
         listTest.add(124);
         
-        listOutput = ListFun.reverse(listInput);
+        listOutput = (ArrayList<Integer>) ListFun.reverse(listInput);
         assertEquals(listTest, listOutput);
     }
 }
