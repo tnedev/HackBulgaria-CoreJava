@@ -16,8 +16,8 @@ public class GameLogic {
     }
 
     protected static void MakeMove(String input, char player) {
-        int placedPin = DisplayBoard.boardMapping[Integer.parseInt(input)];
-        DisplayBoard.b = player;
+		int placedPin = Integer.parseInt(input) - 1;
+		DisplayBoard.setBoardInput(placedPin, player);
     }
     public static void main(String[] args) {
         // TODO Auto-generated method stub
