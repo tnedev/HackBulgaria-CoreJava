@@ -3,10 +3,13 @@ import java.io.IOException;
 
 
 public class DisplayBoard {
+
+	protected static Integer dimmesion = 3;
+	static Integer freePlaces = 9;
     static char[] generateBoard = { '|', '1', '|', '2', '|', '3', '|', '\n', '|', '4', '|', '5', '|', '6', '|', '\n',
             '|', '7', '|', '8', '|', '9', '|' };
 
-	static char[] boardInput = { 'X', '2', '3', '4', '5', '6', '7', '8', '9' };
+	static char[] boardInput = { '1', '2', '3', 'X', 'X', '6', 'X', 'X', '9' };
 
 	static void setBoardInput(Integer x, char ch) {
 		boardInput[x] = ch;
@@ -28,8 +31,10 @@ public class DisplayBoard {
         while (!GameLogic.IsValidMove(input)) {
             input = PlayerInput.userPressed();
         }
-        GameLogic.MakeMove(input, 'y');
+		GameLogic.MakeMove(input, 'X');
 		DisplayBoard.refreshBoard(DisplayBoard.boardInput);
+		boolean result = GameLogic.HasTurn();
+		System.out.println(result);
     }
 
 }
