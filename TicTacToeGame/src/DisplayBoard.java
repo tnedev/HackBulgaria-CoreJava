@@ -21,6 +21,12 @@ public class DisplayBoard {
         System.out.println(generateBoard);
     }
 
+    public static void displayMsg(String message) {
+
+        System.out.print("   " + message);
+
+    }
+
     public static void main(String[] args) throws IOException {
 
 
